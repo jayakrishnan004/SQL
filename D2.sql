@@ -1,0 +1,80 @@
+/*
+#DEALING WITH COMMIT AND ROLLBACK OPERATIONS....
+
+#SELECT * FROM EMPLOYEES;
+
+#SET AUTOCOMMIT = OFF;
+
+#COMMIT;
+
+#DELETE FROM EMPLOYEES;
+               #TABLE DELETED BUT COMMIT DOES THE SAVE BEFORE THE DELETION, A SET POINT IS MADE.
+#ROLLBACK;
+			#ROLLBACK HELPS TO RETURN TO THE SETPOINT.
+#SELECT * FROM EMPLOYEES;
+*/
+
+
+
+/*
+#GETTING THE CURRENT DATE AND TIME using built-in functions.
+	
+CREATE TABLE DATETIME(
+DATE DATE,
+TIME TIME,
+DATETIME DATETIME
+);
+
+
+#SELECT * FROM DATETIME;
+
+#INSERT INTO DATETIME VALUES(current_date(),CURRENT_TIME(),now());
+#SELECT * FROM DATETIME;
+
+#insert into datetime values(current_date() +1, null, null);
+SELECT * FROM DATETIME;
+*/
+
+
+
+/*
+#unique constraint
+
+CREATE TABLE PRODUCTS( 
+	PRODUCT_ID INT,
+    PRODUCT_NAME VARCHAR(20) UNIQUE,
+    PRICE DECIMAL(4,2)
+    );
+
+
+#WARNING OCCURS, ALREADY HAVE A UNIQUE CONSTRAINT
+alter table products add constraint UNIQUE(PRODUCT_NAME); 
+
+SELECT * FROM PRODUCTS;
+
+INSERT INTO PRODUCTS VALUES(10,"APPLE", 10.5),(20,"ORANGE",1.50),(30,"ICE CREAM",5.50),(40,"SODA",3.02);
+SELECT * FROM PRODUCTS;
+
+
+
+       #DUPLICATE ENTRY FOUND FOR PRODUCT NAME(UNIQUE CONSTRAINT WORKING)
+INSERT INTO PRODUCTS VALUES(50,"APPLE",2.33);
+
+select * from products;
+*/
+
+
+
+
+#NOTNULL CONSTRAINT
+
+#select * from products;
+
+
+ 
+
+#create table current (date date);
+#insert into current values(current_date());
+#drop table current;
+select * from current;
+
